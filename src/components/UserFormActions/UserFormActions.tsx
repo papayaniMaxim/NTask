@@ -1,9 +1,11 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import PopUpLayout from "../../layouts/PopUpLayout";
 import User from "../../store/users/user";
 import { createUser, updateUser } from "../../store/users/usersReducer";
 import Button from "../../UI/Button";
+import ConfirmationDialog from "../ConfirmationDialog";
 import classes from "./UserFormActions.module.css";
 
 interface UserFormActionsProps {
@@ -21,13 +23,11 @@ function UserFormActions({
 }: UserFormActionsProps) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const updateButtonHandler: MouseEventHandler = (e) => {
     e.preventDefault();
-    if (id && name && dateOfBirth) {
-      dispatch(updateUser({ id, name, dateOfBirth }));
-      navigate(-1);
-    }
+    setIsOpen(() => true);
   };
 
   const createButtonHandler: MouseEventHandler = (e) => {
@@ -52,6 +52,21 @@ function UserFormActions({
       >
         {type === "create" ? "Добавить" : "Изменить"}
       </Button>
+      {isOpen && (
+        <PopUpLayout onClose={() => setIsOpen(() => false)}>
+          <ConfirmationDialog
+            title="Подтвердите действие"
+            message={`Вы действительно хотите изменить данные  ${name}?`}
+            onCancel={() => setIsOpen(() => false)}
+            onConfirm={() => {
+              if (id && name && dateOfBirth) {
+                dispatch(updateUser({ id, name, dateOfBirth }));
+                navigate(-1);
+              }
+            }}
+          />
+        </PopUpLayout>
+      )}
     </div>
   );
 }
