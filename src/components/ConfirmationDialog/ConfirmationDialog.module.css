@@ -1,0 +1,13 @@
+.container {
+    padding: 1rem;
+    color: #484848;
+}
+.container p {
+    margin: 2rem 0;
+}
+.footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.625rem;
+}

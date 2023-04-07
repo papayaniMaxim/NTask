@@ -1,0 +1,10 @@
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    color: #484848;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 2rem;
+}

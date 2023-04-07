@@ -1,0 +1,9 @@
+.container {
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    margin-left: 13.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}

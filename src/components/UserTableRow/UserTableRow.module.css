@@ -1,0 +1,9 @@
+.linkCell {
+    text-align: center;
+    text-decoration-line: underline;
+    color: #477aff;
+}
+
+.delete{
+    cursor: pointer;
+}

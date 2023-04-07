@@ -1,0 +1,17 @@
+.container{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EEEEEE;
+}
+
+.container .input{
+    width: 65%;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #AFAFAF;
+    border-radius: 1.5rem;
+    font-weight: 400;
+}

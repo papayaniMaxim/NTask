@@ -1,0 +1,38 @@
+/* reset margins, padding, and border to 0 for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+    /* reset list styles */
+  ul, ol {
+    list-style: none;
+  }
+  /* reset links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  th, td {
+    vertical-align: top;
+  }
+  
+  th {
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  thead th {
+    vertical-align: bottom;
+  }
+  
+  

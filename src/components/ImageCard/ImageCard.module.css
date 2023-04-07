@@ -1,0 +1,18 @@
+.imageCard{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.checked{
+    padding: 0.25rem;
+    border: 2px solid #FF4747;
+}
+.image{
+    max-width: 100%;
+    max-height: 100%;
+}

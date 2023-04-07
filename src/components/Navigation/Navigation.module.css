@@ -1,0 +1,28 @@
+.nav {
+    width: 12.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1rem 0;
+    height: fit-content;
+    position: fixed;
+}
+.title{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.title::first-letter {
+    color: #477aff;
+}
+.nav_item {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav_item:hover{
+    background: #E9EFFF;
+}
+
+.active{
+    background: #E9EFFF;
+    color: #477AFF;
+}

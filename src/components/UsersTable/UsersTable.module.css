@@ -1,0 +1,15 @@
+.table {
+    border-collapse: separate;
+    margin-top: 0.6rem;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    color: #484848;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+td {
+    border: 1px solid #eeeeee;
+    padding: 0.5rem;
+    width: 25%;
+}
